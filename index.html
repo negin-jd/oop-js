@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Class Inheritance</h1>
+
+
+<p id="demo"></p>
+<p id="demof"></p>
+<script>
+class person {
+  constructor(name,qad,vazn,age) {
+    this.name=name;
+    this.qad = qad;
+    this.vazn=vazn;
+    this.age=age;
+  }
+  personality() {return 'my name is ' +this.name;}
+  personality1(){return 'my qad is ' + this.qad;}
+  personality2(){return 'my vazn is' +this.vazn;}
+  personality3(){return 'my age is' +this.age;}
+}
+
+class doctor extends person {
+  constructor(name,qad,vazn,age, shakhe) {
+    super(name,qad,vazn,age);
+  
+    this.shakhe = shakhe;
+  }
+  show() {
+      
+    return this. personality() + this. personality1() + this. personality2() + this. personality3() + ', my shakhe is ' + this.shakhe;
+  }
+}
+
+
+class engeener extends person {
+  constructor(name,qad,vazn,age, reshte) {
+    super(name,qad,vazn,age);
+ 
+    this.reshte = reshte;
+  }
+  pow() {
+    return this. personality() + this. personality1() + this. personality2() + this. personality3() + ', my reshte is ' + this.reshte;
+  }
+}
+
+
+
+
+let y = new doctor("zara "," 1.80 "," 80 "," 20 "," maghz ");
+document.getElementById("demo").innerHTML = y.show();
+
+let w = new  engeener(" soghra "," 1.60 "," 50 "," 30 ", " biomedicaal engin ");
+document.getElementById("demof").innerHTML = w.pow();
+</script>
+
+</body>
+</html>
+<!-- ---------------------------------------------------------------- -->
